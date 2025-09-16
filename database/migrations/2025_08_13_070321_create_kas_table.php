@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+    
     public function up(): void
     {
         Schema::create('kas', function (Blueprint $table) {
@@ -19,14 +17,10 @@ return new class extends Migration
         $table->string('keterangan')->nullable();
         $table->timestamps();
 
-        // Relasi ke siswa
+        // Relasi ke tabel siswa//
         $table->foreign('siswa_id')->references('id')->on('siswa')->onDelete('cascade');
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('kas');

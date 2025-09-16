@@ -9,9 +9,8 @@ use Illuminate\Http\Request;
 
 class BulanKasController extends Controller
 {
-    /**
-     * Tampilkan semua data BulanKas.
-     */
+    // Tampilkan semua data BulanKas.
+     
     public function index()
     {
         $bulankas = BulanKas::all();
